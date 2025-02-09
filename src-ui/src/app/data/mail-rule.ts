@@ -65,6 +65,8 @@ export interface MailRule extends ObjectWithPermissions {
 
   maximum_age: number
 
+  minimum_age: number
+
   attachment_type: MailFilterAttachmentType
 
   pdf_layout: MailRulePdfLayout
