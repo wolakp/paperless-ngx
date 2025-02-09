@@ -384,9 +384,12 @@ def make_criterias(rule: MailRule, *, supports_gmail_labels: bool):
     """
 
     maximum_age = date.today() - timedelta(days=rule.maximum_age)
+    minimum_age = date.today() - timedelta(days=rule.minimum_age)
     criterias = {}
     if rule.maximum_age > 0:
         criterias["date_gte"] = maximum_age
+    if rule.minimum_age > 0:
+        criterias["date_lte"] = minimum_age
     if rule.filter_from:
         criterias["from_"] = rule.filter_from
     if rule.filter_to:
