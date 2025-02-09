@@ -28,6 +28,7 @@
       <div class="col-md-6">
         <pngx-input-text [horizontal]="true" i18n-title title="Folder" formControlName="folder" i18n-hint hint="Subfolders must be separated by a delimiter, often a dot ('.') or slash ('/'), but it varies by mail server." [error]="error?.folder"></pngx-input-text>
         <pngx-input-number [horizontal]="true" i18n-title title="Maximum age (days)" formControlName="maximum_age" [showAdd]="false" [error]="error?.maximum_age"></pngx-input-number>
+        <pngx-input-number [horizontal]="true" i18n-title title="Minimum age (days)" formControlName="minimum_age" [showAdd]="false" [error]="error?.minimum_age"></pngx-input-number>
       </div>
       <div class="col-md-6">
         <pngx-input-text [horizontal]="true" i18n-title title="Filter from" formControlName="filter_from" [error]="error?.filter_from"></pngx-input-text>
