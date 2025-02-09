@@ -31,4 +31,12 @@ class Migration(migrations.Migration):
                 help_text="Specified in days.",
             ),
         ),
+        migrations.AlterField(
+            model_name="mailrule",
+            name="minimum_age",
+            field=models.PositiveIntegerField(
+                default=0,
+                help_text="Specified in days.",
+            ),
+        ),
     ]
