@@ -70,6 +70,7 @@ class Migration(migrations.Migration):
                     models.CharField(blank=True, max_length=256, null=True),
                 ),
                 ("maximum_age", models.PositiveIntegerField(default=30)),
+                ("minimum_age", models.PositiveIntegerField(default=0)),
                 (
                     "action",
                     models.PositiveIntegerField(
