@@ -69,6 +69,7 @@ class MailRuleAdmin(GuardedModelAdmin):
                     "filter_attachment_filename_include",
                     "filter_attachment_filename_exclude",
                     "maximum_age",
+                    "minimum_age",
                     "consumption_scope",
                     "attachment_type",
                 ),
