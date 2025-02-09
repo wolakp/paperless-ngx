@@ -221,6 +221,12 @@ class MailRule(document_models.ModelWithOwner):
         help_text=_("Specified in days."),
     )
 
+    minimum_age = models.PositiveIntegerField(
+        _("minimum age"),
+        default=30,
+        help_text=_("Specified in days."),
+    )
+
     attachment_type = models.PositiveIntegerField(
         _("attachment type"),
         choices=AttachmentProcessing.choices,
