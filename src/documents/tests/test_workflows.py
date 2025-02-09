@@ -92,6 +92,7 @@ class TestWorkflows(
             filter_body="body",
             filter_attachment_filename_include="file.pdf",
             maximum_age=30,
+            minimum_age=0,
             action=MailRule.MailAction.MARK_READ,
             assign_title_from=MailRule.TitleSource.NONE,
             assign_correspondent_from=MailRule.CorrespondentSource.FROM_NOTHING,
