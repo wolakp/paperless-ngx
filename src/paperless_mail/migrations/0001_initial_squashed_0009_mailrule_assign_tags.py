@@ -82,6 +82,7 @@ class Migration(migrations.Migration):
                     models.CharField(blank=True, max_length=256, null=True),
                 ),
                 ("maximum_age", models.PositiveIntegerField(default=30)),
+                ("minimum_age", models.PositiveIntegerField(default=0)),
                 (
                     "action",
                     models.PositiveIntegerField(
@@ -204,6 +205,14 @@ class Migration(migrations.Migration):
             name="maximum_age",
             field=models.PositiveIntegerField(
                 default=30,
+                help_text="Specified in days.",
+            ),
+        ),
+        migrations.AlterField(
+            model_name="mailrule",
+            name="minimum_age",
+            field=models.PositiveIntegerField(
+                default=0,
                 help_text="Specified in days.",
             ),
         ),
@@ -397,6 +406,15 @@ class Migration(migrations.Migration):
                 default=30,
                 help_text="Specified in days.",
                 verbose_name="maximum age",
+            ),
+        ),
+        migrations.AlterField(
+            model_name="mailrule",
+            name="minimum_age",
+            field=models.PositiveIntegerField(
+                default=0,
+                help_text="Specified in days.",
+                verbose_name="minimum age",
             ),
         ),
         migrations.AlterField(
