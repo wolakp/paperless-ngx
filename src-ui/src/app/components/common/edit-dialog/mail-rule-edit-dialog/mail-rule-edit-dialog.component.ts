@@ -207,6 +207,7 @@ export class MailRuleEditDialogComponent extends EditDialogComponent<MailRule> {
       filter_attachment_filename_include: new FormControl(null),
       filter_attachment_filename_exclude: new FormControl(null),
       maximum_age: new FormControl(null),
+      minimum_age: new FormControl(null),
       attachment_type: new FormControl(MailFilterAttachmentType.Attachments),
       pdf_layout: new FormControl(MailRulePdfLayout.Default),
       consumption_scope: new FormControl(MailRuleConsumptionScope.Attachments),
