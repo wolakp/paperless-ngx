@@ -85,6 +85,7 @@ class MailRuleSerializer(OwnedObjectSerializer):
             "filter_attachment_filename_include",
             "filter_attachment_filename_exclude",
             "maximum_age",
+            "minimum_age",
             "action",
             "action_parameter",
             "assign_title_from",
