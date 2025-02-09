@@ -223,7 +223,7 @@ class MailRule(document_models.ModelWithOwner):
 
     minimum_age = models.PositiveIntegerField(
         _("minimum age"),
-        default=30,
+        default=0,
         help_text=_("Specified in days."),
     )
 
