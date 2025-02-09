@@ -379,6 +379,7 @@ class TestAPIMailRules(DirectoriesMixin, APITestCase):
             filter_body="body",
             filter_attachment_filename_include="file.pdf",
             maximum_age=30,
+            minimum_age=0,
             action=MailRule.MailAction.MARK_READ,
             assign_title_from=MailRule.TitleSource.FROM_SUBJECT,
             assign_correspondent_from=MailRule.CorrespondentSource.FROM_NOTHING,
@@ -404,6 +405,7 @@ class TestAPIMailRules(DirectoriesMixin, APITestCase):
             rule1.filter_attachment_filename_include,
         )
         self.assertEqual(returned_rule1["maximum_age"], rule1.maximum_age)
+        self.assertEqual(returned_rule1["minimum_age"], rule1.minimum_age)
         self.assertEqual(returned_rule1["action"], rule1.action)
         self.assertEqual(returned_rule1["assign_title_from"], rule1.assign_title_from)
         self.assertEqual(
@@ -455,6 +457,7 @@ class TestAPIMailRules(DirectoriesMixin, APITestCase):
             "filter_body": "body",
             "filter_attachment_filename_include": "file.pdf",
             "maximum_age": 30,
+            "minimum_age": 0,
             "action": MailRule.MailAction.MARK_READ,
             "assign_title_from": MailRule.TitleSource.FROM_SUBJECT,
             "assign_correspondent_from": MailRule.CorrespondentSource.FROM_NOTHING,
@@ -492,6 +495,7 @@ class TestAPIMailRules(DirectoriesMixin, APITestCase):
             rule1["filter_attachment_filename_include"],
         )
         self.assertEqual(returned_rule1["maximum_age"], rule1["maximum_age"])
+        self.assertEqual(returned_rule1["minimum_age"], rule1["minimum_age"])
         self.assertEqual(returned_rule1["action"], rule1["action"])
         self.assertEqual(
             returned_rule1["assign_title_from"],
@@ -547,6 +551,7 @@ class TestAPIMailRules(DirectoriesMixin, APITestCase):
             filter_body="body",
             filter_attachment_filename_include="file.pdf",
             maximum_age=30,
+            minimum_age=0,
             action=MailRule.MailAction.MARK_READ,
             assign_title_from=MailRule.TitleSource.FROM_SUBJECT,
             assign_correspondent_from=MailRule.CorrespondentSource.FROM_NOTHING,
@@ -591,6 +596,7 @@ class TestAPIMailRules(DirectoriesMixin, APITestCase):
             filter_body="body",
             filter_attachment_filename_include="file.pdf",
             maximum_age=30,
+            minimum_age=0,
             action=MailRule.MailAction.MARK_READ,
             assign_title_from=MailRule.TitleSource.FROM_SUBJECT,
             assign_correspondent_from=MailRule.CorrespondentSource.FROM_NOTHING,
